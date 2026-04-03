@@ -3,35 +3,35 @@ body{
 }
    
 h1{
-    font-size: 80px;
+    font-size: 5rem;
     color:#1877F2;
-    margin-bottom: 20px;
+    margin-bottom: 1.3rem;
     text-align: center;
 }
 input{
-    height: 52px;
-    width: 240px;
-    font-size: 24px;
+    height: 3.2rem;
+    width: 15rem;
+    font-size: 1.5rem;
     color: #1877F2;
     border-radius: 12px;
     border: 2px solid #1877F2; 
-    padding-left: 12px;
+    padding-left: 0.8rem;
     
     display: block;
     margin: auto;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 }
 .add{
     background-color: #1877F2;
     color: white;
-    font-size: 20px;
+    font-size: 1.3rem;
     border-radius: 12px;
     border: none;
     outline: none;
-    height: 52px;
-    width: 120px;
-    margin-left: 12px;
-    margin-bottom: 24px;
+    height: 3.2rem;
+    width: 7.5rem;
+    margin-left: 0.8rem;
+    margin-bottom: 1.5rem;
 }
 input::placeholder{
     color: #1877F2;
@@ -48,36 +48,35 @@ button:active{
 p{
     color: #1877F2;
     opacity: 0.7;
-    width: 380px;
     margin: auto;
-    margin-bottom: 70px;
-    font-size: 14px;
-    margin-top: 32px;
+    margin-bottom: 4.3rem;
+    font-size: 0.8rem;
+    margin-top: 2rem;
     text-align: center;
 }
 
 ol li {
-    font-size: 32px;
+    font-size: 1.5rem;
     color: #1877F2;  
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 }
 li button{
-    margin-left: 24px;
+    margin-left: 1.5rem;
     background-color: #E5E4E2;
     color: black;
-    font-size: 20px;
+    font-size: 1.3rem;
     border-radius: 12px;
     outline: none;
     border: none;
-    height: 40px;
-    width: 140px;
-    margin-left: 52px; 
+    height: 2.5rem;
+    width: 8.7rem;
+    margin-left: 3.2rem; 
     text-align: center;
 }
 
 .Task-Card{
-    height: 276px;
-    width: 300px;
+    height: 17.2rem;
+    width: 18.7rem;
     text-align: center;
     border: 2px solid #E0D9D9;
     border-radius: 12px;
