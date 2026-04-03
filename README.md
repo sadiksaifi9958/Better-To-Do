@@ -2,7 +2,7 @@
 
 > Boost your productivity by organizing tasks with clarity and purpose. Stay focused, manage your time wisely, and turn daily actions into meaningful progress.
 
-**Live Demo →** [sadiksaifi9958.github.io/Better-To-Do](https://sadiksaifi9958.github.io/Better-To-Do/)
+[🔗Live Demo](https://sadiksaifi9958.github.io/Better-To-Do/)
 
 ---
 
