@@ -61,10 +61,9 @@ ol li {
     margin-bottom: 1.5rem;
 }
 li button{
-    margin-left: 1rem;
     background-color: #E5E4E2;
     color: black;
-    font-size: 1.3rem;
+    font-size: 1rem;
     border-radius: 12px;
     outline: none;
     border: none;
