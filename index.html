@@ -1,20 +1,43 @@
 <html>
-    <head>
-        <title>Better To Do</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css"/>
-    </head>
-    <body>
-        <h1>BetterToDo</h1>
-        <p>Boost your productivity by organizing tasks with clarity and purpose. Stay focused, manage your time wisely, and turn daily actions into meaningful progress.</p>
 
-        <div class="Task-Card"><h2>Add a Task</h2>
-        <input placeholder="Enter your task">
-        <button class="add">Add Task</button>
+<head>
+    <title>Better To Do</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="heading">BetterToDo</h1>
+    <p class="sub-heading">Boost your productivity by organizing tasks with clarity and purpose. Stay focused, manage your time wisely, and
+        turn daily actions into meaningful progress.</p>
+
+    <form class="task-form">
+        <input placeholder="Type your task here" class="task-title-input">
+        <div class="task-priority">
+            <p>Select your task priority</p>
+            <div>
+                <input type="radio" id="critical" name="task-priority" value="Critical">
+                <label for="critical">Critical</label>
+            </div>
+            <div>
+                <input type="radio" id="strategic" name="task-priority" value="Strategic">
+                <label for="strategic">Strategic</label>
+            </div>
+            <div>
+                <input type="radio" id="minor" name="task-priority" value="Minor">
+                <label for="minor">Minor</label>
+            </div>
         </div>
-        <ol class="list"></ol>
-        <script src="script.js" ></script>
-    </body>
+        <div>
+            <label for="due-time">Set Due Time</label>
+            <input type="time" id="due-time">
+        </div>
+        <button class="add-task">Add Task</button>
+    </form>
 
-</html> 
+    <ol class="list"></ol>
+    <script src="script.js"></script>
+</body>
 
+</html>

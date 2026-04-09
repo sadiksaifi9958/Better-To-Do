@@ -1,86 +1,178 @@
-body{
-    font-family: calibri;  
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-   
-h1{
-    font-size: 4rem;
-    color:#1877F2;
-    margin-bottom: 1.3rem;
+
+body {
+    font-family: Roboto, sens-serif;
     text-align: center;
+    background-color: #181C14;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
-input{
-    height: 3.2rem;
+
+.heading {
+    color: #ECDFCC;
+    font-size: 5rem;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+
+.sub-heading {
+    color: #697565;
+    font-size: 1.5rem;
+    width: 100vh;
+    margin: auto;
+}
+
+.task-form {
+    background-color: #3C3D37;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 1rem;
+    width: 30%;
+    padding: 1.5rem;
+    margin: auto;
+}
+
+.task-title-input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border: 1px solid #697565;
+    border-radius: 5px;
+    outline: none;
+    color: #ECDFCC;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+.task-title-input:focus{
+    outline: 3px solid #ECDFCC;
+    border: 1px solid #697565; 
+}
+
+.task-title-input::placeholder {
+    color: #697565;
+}
+
+.task-priority p {
+    color: #697565;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.task-priority {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top:1rem;
+}
+
+.task-priority div label {
+    color: #697565;
+    font-size: 5rem;
+    cursor:pointer;
+}
+
+.task-priority div input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #697565;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 6px;
+    vertical-align: middle;   
+}
+
+.task-priority div input[type="radio"]:checked {
+    background-color: #ECDFCC;
+    /* fill color */
+    border-color: #697565;
+    /* border color */
+}
+
+.task-priority div{
+    margin-bottom:1rem;
+    display:flex;
+    align-items:center;
+}
+
+.task-priority p{
+    margin-bottom:1rem;
+}
+
+.task-form div label{
+    color: #697565;
+    font-size:1.2rem;
+}
+
+.task-form div input[type="time"]{
+    border: none;
+    background-color: #3C3D37;
+    color:#697565;
+    font-size:1.2rem;
+    outline:none;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.task-form button{
+    background-color:#ECDFCC;
+    outline: none;
+    border: none;
+    color: #181C14;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin:auto;
+    margin-top: 1rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.task-form button:active{
+    opacity: 0.8;
+}
+
+li{
+    font-size: 1.2rem;
+    color:  #697565;
+    background-color: #3C3D37;
+    padding: 1rem;
+    border-radius: 5px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    height: 10rem;
     width: 15rem;
-    font-size: 1rem;
-    color: #1877F2;
-    border-radius: 12px;
-    border: 2px solid #1877F2; 
-    padding-left: 0.8rem;
-    
-    display: block;
-    margin: auto;
-    margin-bottom: 1.5rem;
-}
-.add{
-    background-color: #1877F2;
-    color: white;
-    font-size: 1rem;
-    border-radius: 12px;
-    border: none;
-    outline: none;
-    height: 3.2rem;
-    width: 7.5rem;
-    margin-left: 0.8rem;
-    margin-bottom: 1.5rem;
-}
-input::placeholder{
-    color: #1877F2;
-}
-input:focus{
-    box-shadow: 2px 2px 10px #1877F2;
-    outline: none;
-    color: #1877F2;
 }
 
-button:active{
-    opacity:0.8;
-}
-p{
-    color: #1877F2;
-    opacity: 0.7;
-    margin: auto;
-    margin-bottom: 4.3rem;
-    font-size: 0.8rem;
-    margin-top: 2rem;
-    text-align: center;
+ol{
+    display: flex;
+    gap: 2rem;
+    padding:2rem;
+    flex-wrap:wrap;
 }
 
-ol li {
-    font-size: 1rem;
-    color: #1877F2;  
-    margin-bottom: 1.5rem;
-}
 li button{
-    background-color: #E5E4E2;
-    color: black;
+    padding: 0.5rem;
     font-size: 1rem;
-    border-radius: 12px;
-    outline: none;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
     border: none;
-    height: 2.5rem;
-    width: 8.7rem;
-    margin-left: 3.2rem; 
-    text-align: center;
+    outline: none;
 }
-
-.Task-Card{
-    height: 17.2rem;
-    width: 18.7rem;
-    text-align: center;
-    border: 2px solid #E0D9D9;
-    border-radius: 12px;
-    margin: auto;
-}
-
-
-
