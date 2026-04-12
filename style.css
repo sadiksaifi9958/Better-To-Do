@@ -7,12 +7,13 @@
 }
 
 body {
-    font-family: Roboto, sens-serif;
+    font-family: Roboto, sans-serif;
     text-align: center;
     background-color: #181C14;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    padding: 1rem;
 }
 
 .heading {
@@ -20,12 +21,13 @@ body {
     font-size: 5rem;
     margin: auto;
     margin-top: 0.5rem;
+    text-align:center;
 }
 
 .sub-heading {
     color: #697565;
     font-size: 1.5rem;
-    width: 100vh;
+    width: 60%;
     margin: auto;
 }
 
@@ -55,9 +57,9 @@ body {
     padding: 0.5rem;
 }
 
-.task-title-input:focus{
+.task-title-input:focus {
     outline: 3px solid #ECDFCC;
-    border: 1px solid #697565; 
+    border: 1px solid #697565;
 }
 
 .task-title-input::placeholder {
@@ -74,13 +76,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top:1rem;
+    padding-top: 1rem;
 }
 
 .task-priority div label {
     color: #697565;
-    font-size: 5rem;
-    cursor:pointer;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .task-priority div input[type="radio"] {
@@ -92,7 +94,7 @@ body {
     border-radius: 50%;
     cursor: pointer;
     margin-right: 6px;
-    vertical-align: middle;   
+    vertical-align: middle;
 }
 
 .task-priority div input[type="radio"]:checked {
@@ -102,72 +104,73 @@ body {
     /* border color */
 }
 
-.task-priority div{
-    margin-bottom:1rem;
-    display:flex;
-    align-items:center;
+.task-priority div {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
 }
 
-.task-priority p{
-    margin-bottom:1rem;
+.task-priority p {
+    margin-bottom: 1rem;
 }
 
-.task-form div label{
+.task-form div label {
     color: #697565;
-    font-size:1.2rem;
+    font-size: 1.2rem;
 }
 
-.task-form div input[type="time"]{
+.task-form div input[type="time"] {
     border: none;
     background-color: #3C3D37;
-    color:#697565;
-    font-size:1.2rem;
-    outline:none;
+    color: #697565;
+    font-size: 1.2rem;
+    outline: none;
 }
 
 input[type="time"]::-webkit-calendar-picker-indicator {
-  display: none;
+    display: none;
 }
 
-.task-form button{
-    background-color:#ECDFCC;
+.task-form button {
+    background-color: #ECDFCC;
     outline: none;
     border: none;
     color: #181C14;
     font-size: 1.2rem;
     border-radius: 5px;
     padding: 0.5rem;
-    margin:auto;
+    margin: auto;
     margin-top: 1rem;
     width: 100%;
     cursor: pointer;
 }
 
-.task-form button:active{
+.task-form button:active {
     opacity: 0.8;
 }
 
-li{
+li {
     font-size: 1.2rem;
-    color:  #697565;
+    color: #697565;
     background-color: #3C3D37;
     padding: 1rem;
     border-radius: 5px;
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    min-height: 8rem;
     width: 15rem;
 }
 
-ol{
+ol {
     display: flex;
     gap: 2rem;
-    padding:2rem;
-    flex-wrap:wrap;
+    padding: 2rem;
+    flex-wrap: wrap;
 }
 
-li button{
+li button {
     padding: 0.5rem;
     font-size: 1rem;
     margin-top: 0.5rem;
@@ -175,4 +178,30 @@ li button{
     cursor: pointer;
     border: none;
     outline: none;
+}
+
+@media(max-width: 768px){
+    .heading{
+        font-size: 3rem;
+    }
+
+    .sub-heading{
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    .task-form{
+        width: 90%;
+    }
+
+    ol{
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    li{
+        width: 100%;
+        max-width: 400px;
+    }
 }
