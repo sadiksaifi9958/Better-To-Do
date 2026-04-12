@@ -170,14 +170,28 @@ ol {
     flex-wrap: wrap;
 }
 
+li h3 {
+    color: #ECDFCC;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+
 li button {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     font-size: 1rem;
-    margin-top: 0.5rem;
+    margin-top: auto;
     border-radius: 5px;
     cursor: pointer;
     border: none;
     outline: none;
+    background-color: #e74c3c;
+    font-weight: 500;
+    width: 100%;
+}
+
+li button:hover{
+    opacity:0.85;
 }
 
 @media(max-width: 768px){
@@ -196,12 +210,13 @@ li button {
 
     ol{
         flex-direction: column;
+        justify-content:center;
         align-items: center;
         padding: 1rem;
     }
 
     li{
-        width: 100%;
+        width: 90%;
         max-width: 400px;
     }
 }
