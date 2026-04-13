@@ -5,10 +5,13 @@ let dueTimeInput = document.getElementById("due-time");
 
 function renderTask(task) {
     let taskCard = document.createElement("li");
+    let titleBox = document.createElement("div");
     let taskTitle = document.createElement("h3");
     let taskPriority = document.createElement("p");
     let dueTime = document.createElement("p");
     let removeTask = document.createElement("button");
+    let checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
 
     taskTitle.textContent = task.title;
     taskPriority.textContent = `Priority: ${task.priority}`;
@@ -30,23 +33,35 @@ function renderTask(task) {
 
     removeTask.textContent = "Remove Task";
 
-    taskCard.appendChild(taskTitle);
+    taskCard.appendChild(titleBox);
+    titleBox.appendChild(taskTitle);
+    titleBox.appendChild(checkbox);
     taskCard.appendChild(taskPriority);
     taskCard.appendChild(dueTime);
     taskCard.appendChild(removeTask);
     taskList.appendChild(taskCard);
+
+    checkbox.addEventListener("change", function () {
+        if (checkbox.checked) {
+            taskTitle.style.textDecoration = "line-through";
+            taskCard.style.opacity = "0.5";
+        } else {
+            taskTitle.style.textDecoration = "none";
+            taskCard.style.opacity = "1";
+        }
+    })
 }
 
 function loadTask() {
     let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    tasks.forEach(function(task) {
+    tasks.forEach(function (task) {
         renderTask(task);
     });
 }
 
 loadTask();
 
-taskForm.addEventListener("submit", function(e) {
+taskForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
     let taskPriorityInput = document.querySelector('input[name="task-priority"]:checked');
@@ -76,14 +91,14 @@ taskForm.addEventListener("submit", function(e) {
     taskForm.reset();
 });
 
-taskList.addEventListener("click", function(event) {
+taskList.addEventListener("click", function (event) {
     if (event.target.nodeName == "BUTTON") {
         let delTask = event.target.parentElement;
         let deleteTaskTitle = delTask.querySelector("h3").textContent;
         delTask.remove();
 
         let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-        tasks = tasks.filter(function(task) {
+        tasks = tasks.filter(function (task) {
             return task.title !== deleteTaskTitle;
         });
         localStorage.setItem("tasks", JSON.stringify(tasks));

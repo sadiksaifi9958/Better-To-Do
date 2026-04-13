@@ -21,7 +21,7 @@ body {
     font-size: 5rem;
     margin: auto;
     margin-top: 0.5rem;
-    text-align:center;
+    text-align: center;
 }
 
 .sub-heading {
@@ -145,8 +145,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
 }
 
-.task-form button:active {
-    opacity: 0.8;
+.task-form button:hover {
+    opacity: 0.85;
 }
 
 li {
@@ -170,6 +170,11 @@ ol {
     flex-wrap: wrap;
 }
 
+li div {
+    display: flex;
+    gap: 1rem;
+}
+
 li h3 {
     color: #ECDFCC;
     font-size: 1.1rem;
@@ -190,32 +195,32 @@ li button {
     width: 100%;
 }
 
-li button:hover{
-    opacity:0.85;
+li button:hover {
+    opacity: 0.85;
 }
 
-@media(max-width: 768px){
-    .heading{
+@media(max-width: 768px) {
+    .heading {
         font-size: 3rem;
     }
 
-    .sub-heading{
+    .sub-heading {
         font-size: 1.1rem;
         width: 100%;
     }
 
-    .task-form{
+    .task-form {
         width: 90%;
     }
 
-    ol{
+    ol {
         flex-direction: column;
-        justify-content:center;
+        justify-content: center;
         align-items: center;
         padding: 1rem;
     }
 
-    li{
+    li {
         width: 90%;
         max-width: 400px;
     }
