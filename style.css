@@ -271,6 +271,13 @@ li button:hover {
     color: #181C14;
 }
 
+.empty-msg {
+    color: #ECDFCC;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
 @media(max-width: 768px) {
     .heading {
         font-size: 3rem;

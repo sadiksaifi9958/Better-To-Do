@@ -118,6 +118,7 @@ taskForm.addEventListener("submit", function (e) {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 
     taskForm.reset();
+    emptyMsgShow();
 });
 
 taskList.addEventListener("click", function (event) {
@@ -131,6 +132,7 @@ taskList.addEventListener("click", function (event) {
             return task.title !== deleteTaskTitle;
         });
         localStorage.setItem("tasks", JSON.stringify(tasks));
+        emptyMsgShow();
     }
 });
 
@@ -145,6 +147,7 @@ allCardsBtn.addEventListener("click", function () {
     allCards.forEach(function (e) {
         e.style.display = "";
     })
+    emptyMsgShow();
 })
 
 criticalCardsBtn.addEventListener("click", function () {
@@ -157,6 +160,7 @@ criticalCardsBtn.addEventListener("click", function () {
             e.style.display = "none";
         }
     })
+    emptyMsgShow();
 })
 
 strategicCardsBtn.addEventListener("click", function () {
@@ -169,6 +173,7 @@ strategicCardsBtn.addEventListener("click", function () {
             e.style.display = "none";
         }
     })
+    emptyMsgShow();
 })
 
 minorCardsBtn.addEventListener("click", function () {
@@ -181,4 +186,18 @@ minorCardsBtn.addEventListener("click", function () {
             e.style.display = "none";
         }
     })
+    emptyMsgShow();
 })
+
+let emptyMsg = document.querySelector(".empty-msg");
+
+function emptyMsgShow() {
+    if (document.querySelectorAll("li").length === 0) {
+        emptyMsg.style.display = "";
+    } else {
+        emptyMsg.style.display = "none";
+    }
+}
+
+
+
