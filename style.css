@@ -303,4 +303,15 @@ li button:hover {
         width: 90%;
         max-width: 400px;
     }
+
+    .filters {
+        gap: 0.7
+    }
+
+    .all,
+    .critical,
+    .strategic,
+    .minor {
+        font-size: 0.9rem;
+    }
 }
