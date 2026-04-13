@@ -12,6 +12,11 @@ function renderTask(task) {
     let removeTask = document.createElement("button");
     let checkbox = document.createElement("input");
     checkbox.type = "checkbox";
+    if (task.completed) {
+        checkbox.checked = true;
+        taskTitle.style.textDecoration = "line-through";
+        taskCard.style.opacity = "0.5";
+    }
 
     taskTitle.textContent = task.title;
     taskPriority.textContent = `Priority: ${task.priority}`;
@@ -41,11 +46,34 @@ function renderTask(task) {
     taskCard.appendChild(removeTask);
     taskList.appendChild(taskCard);
 
+
+
     checkbox.addEventListener("change", function () {
+
         if (checkbox.checked) {
+            let tasks = JSON.parse(localStorage.getItem("tasks"));
+            tasks = tasks.map(function (task) {
+                if (task.title == taskTitle.textContent) {
+                    task.completed = true;
+                    return task;
+                } else {
+                    return task;
+                }
+            })
+            localStorage.setItem("tasks", JSON.stringify(tasks));
             taskTitle.style.textDecoration = "line-through";
             taskCard.style.opacity = "0.5";
         } else {
+            let tasks = JSON.parse(localStorage.getItem("tasks"));
+            tasks = tasks.map(function (task) {
+                if (task.title == taskTitle.textContent) {
+                    task.completed = false;
+                    return task;
+                } else {
+                    return task;
+                }
+            })
+            localStorage.setItem("tasks", JSON.stringify(tasks));
             taskTitle.style.textDecoration = "none";
             taskCard.style.opacity = "1";
         }
@@ -79,7 +107,8 @@ taskForm.addEventListener("submit", function (e) {
     const task = {
         title: taskTitleInput.value,
         priority: taskPriorityInput.value,
-        dueTime: dueTimeInput.value
+        dueTime: dueTimeInput.value,
+        completed: false
     }
 
     renderTask(task);
