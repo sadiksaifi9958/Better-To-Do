@@ -165,6 +165,7 @@ li {
 
 ol {
     display: flex;
+    justify-content: center;
     gap: 2rem;
     padding: 2rem;
     flex-wrap: wrap;
@@ -197,6 +198,77 @@ li button {
 
 li button:hover {
     opacity: 0.85;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 90%;
+    border: none;
+    margin: auto;
+}
+
+.all {
+    padding: 0.5rem 1rem;
+    background-color: #181C14;
+    color: #ECDFCC;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border: 1px solid #ECDFCC;
+    cursor: pointer;
+}
+
+.all:active {
+    background-color: #ECDFCC;
+    color: #181C14;
+}
+
+.critical {
+    padding: 0.5rem 1rem;
+    background-color: #181C14;
+    color: #e74c3c;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border: 1px solid #e74c3c;
+    cursor: pointer;
+}
+
+.critical:active {
+    background-color: #e74c3c;
+    color: #181C14;
+}
+
+.strategic {
+    padding: 0.5rem 1rem;
+    background-color: #181C14;
+    color: #f39c12;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border: 1px solid #f39c12;
+    cursor: pointer;
+}
+
+.strategic:active {
+    background-color: #f39c12;
+    color: #181C14;
+}
+
+.minor {
+    padding: 0.5rem 1rem;
+    background-color: #181C14;
+    color: #2ecc71;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border: 1px solid #2ecc71;
+    cursor: pointer;
+}
+
+.minor:active {
+    background-color: #2ecc71;
+    color: #181C14;
 }
 
 @media(max-width: 768px) {

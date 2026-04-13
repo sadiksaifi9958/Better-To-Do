@@ -133,3 +133,52 @@ taskList.addEventListener("click", function (event) {
         localStorage.setItem("tasks", JSON.stringify(tasks));
     }
 });
+
+let allCardsBtn = document.querySelector(".all");
+let criticalCardsBtn = document.querySelector(".critical");
+let strategicCardsBtn = document.querySelector(".strategic");
+let minorCardsBtn = document.querySelector(".minor");
+
+allCardsBtn.addEventListener("click", function () {
+    let allCards = document.querySelectorAll("li");
+
+    allCards.forEach(function (e) {
+        e.style.display = "";
+    })
+})
+
+criticalCardsBtn.addEventListener("click", function () {
+    let cards = document.querySelectorAll("li");
+
+    cards.forEach(function (e) {
+        if (e.querySelector("p").textContent.includes("Critical")) {
+            e.style.display = "";
+        } else {
+            e.style.display = "none";
+        }
+    })
+})
+
+strategicCardsBtn.addEventListener("click", function () {
+    let cards = document.querySelectorAll("li");
+
+    cards.forEach(function (e) {
+        if (e.querySelector("p").textContent.includes("Strategic")) {
+            e.style.display = "";
+        } else {
+            e.style.display = "none";
+        }
+    })
+})
+
+minorCardsBtn.addEventListener("click", function () {
+    let cards = document.querySelectorAll("li");
+
+    cards.forEach(function (e) {
+        if (e.querySelector("p").textContent.includes("Minor")) {
+            e.style.display = "";
+        } else {
+            e.style.display = "none";
+        }
+    })
+})
