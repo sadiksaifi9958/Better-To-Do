@@ -2,6 +2,7 @@ let taskForm = document.querySelector(".task-form");
 let taskList = document.querySelector("ol");
 let taskTitleInput = document.querySelector(".task-title-input");
 let dueTimeInput = document.getElementById("due-time");
+let emptyMsg = document.querySelector(".empty-msg");
 
 function renderTask(task) {
     let taskCard = document.createElement("li");
@@ -45,6 +46,8 @@ function renderTask(task) {
     taskCard.appendChild(dueTime);
     taskCard.appendChild(removeTask);
     taskList.appendChild(taskCard);
+    checkbox.className = "task-checkbox";
+    checkbox.title = "Mark as complete";
 
 
 
@@ -88,6 +91,7 @@ function loadTask() {
 }
 
 loadTask();
+emptyMsgShow();
 
 taskForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -189,15 +193,13 @@ minorCardsBtn.addEventListener("click", function () {
     emptyMsgShow();
 })
 
-let emptyMsg = document.querySelector(".empty-msg");
-
 function emptyMsgShow() {
     if (document.querySelectorAll("li").length === 0) {
         emptyMsg.style.display = "";
     } else {
         emptyMsg.style.display = "none";
     }
-}
+};
 
 
 

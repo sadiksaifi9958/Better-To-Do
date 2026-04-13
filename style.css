@@ -278,6 +278,50 @@ li button:hover {
     padding: 1rem;
 }
 
+.task-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #697565;
+    border-radius: 4px;
+    /* square with slight rounding */
+    cursor: pointer;
+}
+
+.task-checkbox:checked {
+    background-color: #ECDFCC;
+    border-color: #697565;
+}
+
+.task-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #697565;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    /* needed for ::after to position inside */
+}
+
+.task-checkbox:checked {
+    background-color: #ECDFCC;
+    border-color: #ECDFCC;
+}
+
+.task-checkbox:checked::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #181C14;
+    font-size: 12px;
+    font-weight: 700;
+}
+
 @media(max-width: 768px) {
     .heading {
         font-size: 3rem;
