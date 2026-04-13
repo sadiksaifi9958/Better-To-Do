@@ -1,56 +1,62 @@
-# ✅ BetterToDo
+# BetterToDo
 
-> Boost your productivity by organizing tasks with clarity and purpose. Stay focused, manage your time wisely, and turn daily actions into meaningful progress.
+A clean, productivity-focused to-do app built with vanilla HTML, CSS, and JavaScript.
 
-[🔗Live Demo](https://sadiksaifi9958.github.io/Better-To-Do/)
+🔗 **Live Demo**: [sadiksaifi9958.github.io/Better-To-Do](https://sadiksaifi9958.github.io/Better-To-Do/)
+
+---
+
+## Screenshot
+
+![BetterToDo App](screenshot.png)
+
+> Tasks organized by priority — Critical, Strategic, and Minor — with color coded cards and filter buttons.
 
 ---
 
 ## Features
 
-- Add tasks quickly with an input field and button
-- Mark tasks as complete
-- Delete tasks you no longer need
-- Clean, distraction-free UI focused on productivity
-- Zero dependencies — pure HTML, CSS, and JavaScript
+- **Add Tasks** — Create tasks with a title, priority level, and due time
+- **Priority System** — Three priority levels: Critical, Strategic, and Minor — each color coded
+- **Task Completion** — Check off tasks with strikethrough and fade effect
+- **Delete Tasks** — Remove individual tasks from the list
+- **Filter by Priority** — Filter tasks by All, Critical, Strategic, or Minor
+- **Persistent Storage** — Tasks survive page refresh using localStorage
+- **Input Validation** — Alerts user if task title or priority is missing
+- **Empty State** — Friendly message shown when no tasks exist
+- **Responsive Design** — Works on mobile and desktop
 
 ---
 
-## Tech Stack
+## Built With
 
-| Technology | Purpose |
-|------------|---------|
-| HTML5 | Page structure and layout |
-| CSS3 | Styling and responsive design |
-| JavaScript (Vanilla) | Task logic and DOM manipulation |
+- HTML5
+- CSS3 (Flexbox, Media Queries, CSS Custom Properties)
+- JavaScript (DOM Manipulation, localStorage, Array Methods)
 
 ---
 
-## How It Works
+## What I Learned
 
-1. Type a task into the input field
-2. Click **Add Task** to add it to your list
-3. Click a task to mark it as complete
-4. Remove tasks when done
+- DOM manipulation — creating, appending, and removing elements dynamically
+- localStorage — saving, reading, and updating data across page refreshes
+- Array methods — `forEach`, `filter`, and `map` for working with task data
+- Event listeners — handling form submit, button clicks, and checkbox changes
+- Input validation — preventing crashes from empty or incomplete form submissions
+- Responsive CSS — mobile-first adjustments using media queries
 
 ---
 
 ## Getting Started
 
-### Run Locally
+To run this project locally:
 
 ```bash
-# Clone the repository
 git clone https://github.com/sadiksaifi9958/Better-To-Do.git
-
-# Navigate into the project folder
 cd Better-To-Do
-
-# Open index.html in your browser
-open index.html
 ```
 
-No build tools or dependencies required.
+Then open `index.html` in your browser or use a local server like Live Server in VS Code.
 
 ---
 
@@ -58,19 +64,12 @@ No build tools or dependencies required.
 
 ```
 Better-To-Do/
-├── index.html      # Main HTML file
-├── style.css       # Styles
-└── script.js       # Task management logic
+├── index.html
+├── style.css
+├── script.js
+└── screenshot.png
+
 ```
-
----
-
-## What I Learned
-
-- Managing a dynamic list of items using JavaScript arrays and DOM manipulation
-- Handling user input with `addEventListener` and form events
-- Adding and removing elements from the DOM using `createElement` and `remove()`
-- Structuring a small project cleanly with separation of HTML, CSS, and JS
 
 ---
 
@@ -78,7 +77,7 @@ Better-To-Do/
 
 **Sadik Saifi**
 - GitHub: [@sadiksaifi9958](https://github.com/sadiksaifi9958)
-- LinkedIn: [linkedin.com/in/sadik-saifi-934794353](https://www.linkedin.com/in/sadik-saifi-934794353?utm_source=share_via&utm_content=profile&utm_medium=member_android)
+- LinkedIn: [sadik-saifi-934794353](https://linkedin.com/in/sadik-saifi-934794353)
 
 ---
 
